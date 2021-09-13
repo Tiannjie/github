@@ -1,0 +1,357 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(238, 227, 227);
+}
+.head{
+    width: 100%;
+    height: 60px;
+    /* background: pink; */
+    background-color: rgb(64, 67, 68);
+    border-top: 3px solid burlywood;
+    border-bottom: 1px solid #edeef0;
+}
+.left{
+    float: left;
+    margin-left: 200px;
+}
+.left p{
+    line-height: 60px;
+    font-size: 24px;
+    font-family: Arial;
+    font-weight: 700;
+    color: rgb(234, 238, 14);
+}
+.right{
+    float: right;
+    margin-right: 400px;
+}
+.right ul li{
+    float: left;
+    list-style: none;
+    /* margin: auto 30px; */
+    line-height: 60px;
+    /* color: #fff; */
+}
+.right ul li a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 30px;
+    color: #fff;
+}
+.right ul li a:hover{
+    background-color: burlywood;
+    color: #fff;
+}
+.slides{
+    position: relative;
+    margin: 0 auto;
+    /* margin: 63px auto 0px; */
+    width: 1200px;
+    height: 680px;
+    /* background: tomato; */
+    text-align: center;
+    font-family: Arial;
+    color: #fff; 
+    overflow: hidden; 
+}
+li.slide{
+    margin: 0;
+    padding: 0;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Helvetica;
+    font-size: 120px;
+    color: #fff;
+    transition: .5s transform ease-in-out;
+}
+
+.slide:nth-of-type(1){
+    background: pink;
+}
+.slide:nth-of-type(2){
+    background: yellow;
+    left: 150%;
+}
+.slide:nth-of-type(3){
+    background: green;
+    left: 300%;
+}
+input[type="radio"]{
+    position: relative;
+    z-index: 100;
+    display: none;
+}
+.control-visible{
+    position: absolute;
+    width: 100%;
+    bottom: 12px;
+    text-align: center;
+}
+.control-visible label{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 2px solid #fff;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~
+.control-visible label:nth-of-type(1){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~
+.control-visible label:nth-of-type(2){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~
+.control-visible label:nth-of-type(3){
+    background-color: #333;
+}
+.slides input[type="radio"]:nth-of-type(1):checked ~ .slide{
+    transform: translateX(0%);
+}
+.slides input[type="radio"]:nth-of-type(2):checked ~ .slide{
+    transform: translateX(-150%);
+}
+.slides input[type="radio"]:nth-of-type(3):checked ~ .slide{
+    transform: translateX(-300%);
+}
+.place{
+    width: 100%;
+    height: 249px;
+    margin: 50px auto;
+    /* background-color: pink; */
+}
+.place ul{
+    margin-left: 175px;
+}
+.place ul li{
+    display: block;
+    float: left;
+    width: 249px;
+    height: 249px;
+    background-color: rgb(103, 197, 181);
+    margin: 0 20px;
+    text-align: center;
+}
+.place ul li a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    box-shadow: 0 0 0 1px #fff inset;
+    transition: box-shadow 0.3s ease 0s;
+    border-radius: 50%;
+    margin: 10px auto;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.place ul li a:hover{
+    box-shadow: 0 0 0 25px #fff inset;
+    color: #c1dcc5;
+}
+.place ul li p{
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* 风景 */
+.container{
+    margin: 30px auto;
+    text-align: center;
+}
+.container h6{
+    margin: 20px auto;
+    font-size: 16px;
+    color: silver;
+    font-weight: 400;
+}
+.scene ul {
+    margin-left: 150px;
+}
+.scene ul li{
+    position: relative;
+    float: left;  
+    width: 300px;
+    height: 330px;
+    background-color: #fff;
+    /* margin: 0 15px 15px 0;  */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+.scene ul li img{
+    display: block;
+    width: 249px;
+    height: 230px;
+    margin: 20px auto;
+}
+.scene ul li h4{
+    margin: 20px 0 10px 10px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.scene ul li .info{
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+.scene ul li span{
+    color: #ff7c2d;
+}
+/* 美食 */
+#foods{
+    clear: both;/* 清除浮动 */
+    margin: 50px auto;
+}
+.box-hd{
+    text-align: center;
+}
+.box-hd h6{
+    margin: 20px auto;
+    font-size: 16px;
+    color: silver;
+    font-weight: 400;
+}
+.box-hd ul{
+    margin-left: 150px;
+}
+.box-hd ul li{
+    position: relative;
+    float: left;  
+    width: 300px;
+    height: 330px;
+    background-color: #fff;
+    /* margin: 0 15px 15px 0;  */
+    margin-right: 15px;
+    margin-bottom: 15px;
+    list-style: none;
+}
+.box-hd ul li img{
+    display: block;
+    width: 249px;
+    height: 230px;
+    margin: 20px auto; 
+}
+/* 足迹 */
+#foot{
+    clear: both;
+}
+#demo {
+    background: #FFF;
+    overflow:hidden;
+    border: 1px dashed #CCC;
+    width: 1200px;
+    margin: 30px auto;
+    }
+#demo img {
+    border: 3px solid #F2F2F2;
+    }
+#indemo {
+    float: left;
+    width: 800%;
+    }
+#demo1 {
+    float: left;
+    }
+#demo2 {
+    float: left;
+    }  
+/* 分享 */
+.zuo{
+    float: left;
+    margin-left: 250px;
+}
+.zuo h1{
+    margin:20px 0;
+}
+.zuo a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #70cae0;
+    background-color: #70cae0;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+    float: left;
+    margin: 5px 10px;
+}
+.zuo h2{
+    margin: 0 5PX;
+}
+.zuo p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+.you{
+    float: right;
+    width: 330px;
+    height: 330px;
+    background-color: #333;
+    border-radius: 50%;
+    margin-right: 250px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 0;
+    left: 0; 
+}
+.you h2{
+    color: #f2f2f2;
+    position: absolute;
+    top: 43px;
+    left: 110px; 
+} 
+.you ul{
+    position: absolute;
+    top: 95px;
+    left: 65px; 
+}
+.you ul li{
+    list-style: none;
+    color: #fff;
+    margin: 10px 0;   
+}
+.you ul li input{
+    box-sizing: border-box; 
+    border: none;
+}
+.you .button{
+    position: absolute;
+    top: 225px;
+    left: 110px;
+    color: #333; 
+    width: 115px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+}
+/* footer部分 */
+.footer{
+    clear: both;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(64, 67, 68);
+    margin-top: 20px;
+}
+.footer h2{
+    text-align: center;
+    line-height: 100px;
+    color: burlywood;
+}
